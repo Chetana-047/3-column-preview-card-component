@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    /* (paragraphs) */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* (background, headings, buttons) */
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+
+/* utilities*/
+
+.bg-primary {
+    background-color: var(--Bright-orange);
+}
+
+.bg-secondary {
+    background-color: var(--Dark-cyan);
+}
+
+.bg-tertiary {
+    background-color: var(--Very-dark-cyan);
+}
+
+.btn {
+    background-color: var(--Very-light-gray);
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+
+.btn:hover {
+    color: var(--Very-light-gray);
+    background-color: transparent;
+    border: 2px solid var(--Very-light-gray);
+}
+
+.text-primary {
+    color: var(--Bright-orange);
+}
+
+.text-secondary {
+    color: var(--Dark-cyan);
+}
+
+.text-tertiary {
+    color: var(--Very-dark-cyan);
+}
+
+
+/* gloabal styles*/
+
+body {
+    background-color: var(--Very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.5;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh-20px;
+    margin: 0 auto;
+}
+
+
+/* container*/
+
+.container {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    width: 80vw;
+    margin: 3rem auto;
+}
+
+
+/*card*/
+
+.card {
+    padding: 3rem;
+}
+
+.card h1 {
+    color: var(--Very-light-gray);
+    margin: 1.5rem 0;
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+}
+
+.card p {
+    color: var(--Transparent-white);
+    margin-bottom: 5rem;
+    font-size: 1.2rem;
+}
+
+.card a {
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.card-1 {
+    border-radius: 5px 5px 0 0;
+}
+
+.card-3 {
+    border-radius: 0 0 5px 5px;
+}
+
+.attribution {
+    color: var(--Very-dark-cyan);
+    font-size: 1rem;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 10px;
+}
+
+@media screen and (min-width:1100px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card-1 {
+        border-radius: 5px 0 0 5px;
+    }
+    .card-3 {
+        border-radius: 0 5px 5px 0;
+    }
+}
